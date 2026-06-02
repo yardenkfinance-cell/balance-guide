@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מדריך דו"ח יתרה לסילוק | ירדן קובי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bd:#1e3a8a;--b:#2563eb;--bl:#60a5fa;--am:#f59e0b;--g50:#f8fafc;--g200:#e2e8f0;--g400:#94a3b8;--g600:#475569;--g800:#1e293b;--sh:0 8px 32px rgba(0,0,0,.10);--r:14px;--rs:9px}
+    body{font-family:'Assistant','Heebo',sans-serif;background:linear-gradient(135deg,#e8f0fe,#f0f9ff,#fefce8);min-height:100vh;padding:24px 14px 48px;color:var(--g800)}
+    .w{max-width:800px;margin:0 auto}
+    .hd{text-align:center;margin-bottom:22px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:var(--bd);color:#fff;font-size:12px;font-weight:700;padding:4px 13px;border-radius:20px;margin-bottom:9px}
+    .hd h1{font-family:'Heebo',sans-serif;font-weight:900;font-size:clamp(21px,5vw,32px);background:linear-gradient(135deg,var(--bd),var(--b),var(--bl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.15;margin-bottom:6px}
+    .hd p{color:var(--g600);font-size:13px;max-width:500px;margin:0 auto;line-height:1.5}
+    .info{background:#fff;border:2px solid #bfdbfe;border-radius:var(--r);padding:14px;margin-bottom:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px}
+    .ii{display:flex;align-items:flex-start;gap:8px}
+    .ii-icon{font-size:19px;flex-shrink:0;margin-top:1px}
+    .ii strong{display:block;font-size:12px;font-weight:800;color:var(--bd);margin-bottom:1px}
+    .ii span{font-size:11.5px;color:var(--g600);line-height:1.4}
+    .bt{font-family:'Heebo',sans-serif;font-weight:800;font-size:14px;color:var(--bd);margin-bottom:12px;text-align:center}
+    .bg{display:grid;grid-template-columns:repeat(auto-fill,minmax(115px,1fr));gap:9px;margin-bottom:20px}
+    .bb{background:#fff;border:2.5px solid var(--g200);border-radius:var(--rs);padding:12px 8px 9px;cursor:pointer;transition:all .22s;display:flex;flex-direction:column;align-items:center;gap:7px;box-shadow:0 2px 7px rgba(0,0,0,.05)}
+    .bb:hover{border-color:var(--b);transform:translateY(-3px);box-shadow:0 7px 20px rgba(37,99,235,.15)}
+    .bb.active{border-color:var(--b);background:#eff6ff;box-shadow:0 7px 20px rgba(37,99,235,.18)}
+    .logo-box{width:82px;height:44px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .logo-box img{max-width:82px;max-height:44px;object-fit:contain;display:block}
+    .logo-fb{display:none;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:#fff;font-family:'Heebo',sans-serif}
+    .bn{font-size:11px;font-weight:700;color:var(--g600);text-align:center;line-height:1.3}
+    .gp{display:none;background:#fff;border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;animation:fu .35s ease;margin-bottom:16px}
+    .gp.show{display:block}
+    @keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .gh{padding:14px 18px;display:flex;align-items:center;gap:14px}
+    .gh-logo-wrap{background:rgba(255,255,255,.95);border-radius:8px;padding:6px 12px;height:50px;display:flex;align-items:center;justify-content:center;min-width:90px}
+    .gh-logo{max-height:38px;max-width:110px;object-fit:contain;display:block}
+    .gh-name{font-family:'Heebo',sans-serif;font-weight:900;font-size:17px;color:#fff}
+    .gb{padding:16px}
+    .meth{background:var(--g50);border-radius:var(--rs);border:1.5px solid var(--g200);padding:13px;margin-bottom:10px}
+    .meth:last-child{margin-bottom:0}
+    .mt{font-family:'Heebo',sans-serif;font-weight:800;font-size:13px;color:var(--bd);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+    .mn{background:var(--bd);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;flex-shrink:0}
+    .steps{list-style:none}
+    .steps li{display:flex;align-items:flex-start;gap:7px;padding:5px 0;font-size:12px;color:var(--g600);border-bottom:1px solid var(--g200)}
+    .steps li:last-child{border-bottom:none}
+    .sd{background:var(--b);color:#fff;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;flex-shrink:0;margin-top:1px}
+    .steps li strong{color:var(--b);font-weight:700}
+    .pbadge{display:inline-flex;align-items:center;gap:5px;background:linear-gradient(135deg,var(--bd),var(--b));color:#fff;padding:7px 15px;border-radius:30px;font-size:13px;font-weight:800;margin-top:8px;text-decoration:none;transition:transform .2s}
+    .pbadge:hover{transform:scale(1.04)}
+    .hbadge{display:inline-block;background:#f0fdf4;border:1.5px solid #86efac;color:#065f46;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-top:6px}
+    .nbox{background:#fff8e1;border:1.5px solid #fde68a;border-radius:7px;padding:7px 10px;font-size:11.5px;color:#7c5e00;margin-bottom:9px;font-weight:600}
+    .cta{background:linear-gradient(135deg,var(--bd),var(--b));color:#fff;border-radius:var(--r);padding:16px;text-align:center}
+    .cta h3{font-family:'Heebo',sans-serif;font-weight:900;font-size:15px;margin-bottom:4px}
+    .cta p{font-size:12px;opacity:.9;margin-bottom:11px}
+    .ctab{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
+    .bph{display:inline-flex;align-items:center;gap:5px;background:var(--am);color:#1a1200;padding:8px 15px;border-radius:30px;font-weight:900;font-size:13px;text-decoration:none;transition:transform .2s}
+    .bwa{display:inline-flex;align-items:center;gap:5px;background:#25d366;color:#fff;padding:8px 15px;border-radius:30px;font-weight:900;font-size:13px;text-decoration:none;transition:transform .2s}
+    .bph:hover,.bwa:hover{transform:scale(1.04)}
+  </style>
+</head>
+<body>
+<div class="w">
+  <div class="hd">
+    <div class="badge">📄 מדריך מקצועי | ירדן קובי — יועץ משכנתאות</div>
+    <h1>הוצאת דו"ח יתרה לסילוק</h1>
+    <p>בחר את הבנק שלך וקבל הוראות מדויקות שלב-אחר-שלב</p>
+  </div>
+  <div class="info">
+    <div class="ii"><div class="ii-icon">📋</div><div><strong>מה זה?</strong><span>מסמך המפרט את כל נתוני המשכנתא — סכום, ריבית ועמלות פירעון</span></div></div>
+    <div class="ii"><div class="ii-icon">💰</div><div><strong>עלות</strong><span>פעם בשנה ללא עלות. בנוסף — עמלה סמלית של עשרות שקלים</span></div></div>
+    <div class="ii"><div class="ii-icon">⏱️</div><div><strong>מתי יגיע?</strong><span>הבנק חייב לספק תוך <strong>2 ימי עסקים</strong> ע"פ הוראת בנק ישראל</span></div></div>
+    <div class="ii"><div class="ii-icon">🎯</div><div><strong>למה צריך?</strong><span>לבדיקת מחזור, להשוואת הצעות ולתכנון פיננסי חכם</span></div></div>
+  </div>
+  <div class="bt">בחר את הבנק שלך 👇</div>
+  <div class="bg" id="bg"></div>
+  <div class="gp" id="gp"><div class="gh" id="gh"></div><div class="gb" id="gb"></div></div>
+  <div class="cta">
+    <h3>💡 יש לך את הדו"ח? בוא נבדוק אם כדאי לך לעשות מחזור</h3>
+    <p>ירדן קובי — יועץ משכנתאות מוסמך | ייעוץ ראשוני ללא עלות</p>
+    <div class="ctab">
+      <a href="tel:0533030629" class="bph">📞 053-303-0629</a>
+      <a href="https://wa.me/972533030629?text=היי%20ירדן%2C%20יש%20לי%20דוח%20יתרה%20לסילוק%20ואשמח%20לבדוק%20מחזור" target="_blank" class="bwa">💬 וואטסאפ</a>
+    </div>
+  </div>
+</div>
+<script>
+const BANKS = [
+  {
+    id:'leumi', name:'בנק לאומי', color:'#006DB7',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303746/Leumi2022_jnz4ix.png',
+    methods:[
+      { title:'דרך אתר הבנק', steps:['כנסו לאתר לאומי עם שם משתמש וסיסמא','פתחו את התפריט בצד ימין','לחצו <strong>הלוואות ומשכנתאות</strong>','בחרו <strong>הזמנת מסמכי משכנתאות</strong>','הזמינו <strong>אישור יתרות לסילוק</strong>','המסמך יגיע ביום המחרת בתא הדואר הדיגיטלי'] },
+      { title:'מוקד טלפוני', phone:'*6062', hours:'א\'–ה\' | 08:00–16:00', steps:['התקשרו למוקד *6062','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'mizrahi', name:'מזרחי טפחות', color:'#E8541A',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303720/%D7%9C%D7%95%D7%92%D7%95_%D7%A9%D7%9C_%D7%91%D7%A0%D7%A7_%D7%9E%D7%96%D7%A8%D7%97%D7%99-%D7%98%D7%A4%D7%97%D7%95%D7%AA_kgygqb.png',
+    methods:[
+      { title:'דרך האתר — יש גם עו"ש בבנק', steps:['כנסו לאתר מזרחי טפחות','לחצו <strong>כניסה לחשבון</strong> (שמאל עליון)','לחצו <strong>הלוואות ומשכנתאות</strong>','בחרו <strong>המשכנתא שלי</strong>','נכנסו ל<strong>טפסים ואישורים</strong>','הזמינו את המסמך'] },
+      { title:'דרך האתר — רק משכנתא (ללא עו"ש)', steps:['כנסו ל<strong>כניסה ללקוחות טפחות</strong> באתר/אפליקציה','הזינו נתוני זיהוי','הכניסו קוד חד-פעמי שיגיע לנייד','הזמינו את המסמך'] },
+      { title:'מוקד טלפוני', phone:'*8860', hours:'א\'–ה\' 8:00–18:30 | ו\' 8:00–13:00', steps:['התקשרו למוקד *8860','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'poalim', name:'בנק הפועלים', color:'#FF5500',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303746/BankHapoalim_jxwpk9.png',
+    methods:[
+      { title:'דרך אתר הבנק', note:'ניתן רק אם יש קוד משתמש וסיסמא וחשבון עו"ש בפועלים', steps:['כנסו לאתר הפועלים והתחברו','בחרו <strong>דוח פרטי משכנתאות</strong>','אשרו קבלת דוח','תקבלו מיד את הדוח לשמירה/הדפסה'] },
+      { title:'מוקד טלפוני', phone:'*2401', hours:'א\'–ה\' | 08:00–16:00', steps:['התקשרו למוקד *2401','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'discount', name:'בנק דיסקונט', color:'#007A4D',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303746/DiscountBank_tcgrme.png',
+    methods:[
+      { title:'דרך אתר הבנק', note:'ניתן רק אם יש קוד משתמש וסיסמא וחשבון עו"ש בדיסקונט', steps:['כנסו לאתר דיסקונט','לחצו <strong>כניסה לחשבונות פרטיים</strong>','הזינו קוד משתמש וסיסמא','תפריט ימין → <strong>משכנתאות</strong>','לחצו <strong>פירוט המשכנתא המלא כולל יתרה לסילוק</strong>','תקבלו מיד את הדוח'] },
+      { title:'מוקד טלפוני', phone:'*2009', hours:'א\'–ה\' 8:00–19:00 | ו\' 8:00–13:00', steps:['התקשרו למוקד *2009','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'mercantile', name:'מרכנתיל דיסקונט', color:'#1A7D3C',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303746/Mercantile_psw31j.png',
+    methods:[
+      { title:'דרך אתר הבנק', note:'ניתן רק אם יש קוד משתמש וסיסמא וחשבון עו"ש במרכנתיל', steps:['כנסו לאתר מרכנתיל','לחצו <strong>כניסה לחשבונות פרטיים</strong>','הזינו קוד משתמש וסיסמא','תפריט ימין → <strong>משכנתאות</strong>','לחצו <strong>פירוט המשכנתא המלא כולל יתרה לסילוק</strong>','תקבלו מיד את הדוח'] },
+      { title:'מוקד טלפוני', phone:'*3477', hours:'א\',ג\',ה\' 8:30–13:45 | ב\',ד\' 8:30–13:00, 16:00–18:15', steps:['התקשרו למוקד *3477','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'beinleumi', name:'הבינלאומי', color:'#1F3A6E',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303747/%D7%94%D7%91%D7%A0%D7%A7_%D7%94%D7%91%D7%99%D7%A0%D7%9C%D7%90%D7%95%D7%9E%D7%99_nl6yky.png',
+    methods:[
+      { title:'מוקד טלפוני בלבד', phone:'1-700-700-185', hours:'א\'–ה\' | 8:00–18:00', steps:['התקשרו ל-1-700-700-185','בחרו <strong>שלוחה 2</strong>','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'jerusalem', name:'בנק ירושלים', color:'#8B6914',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303746/%D7%91%D7%A0%D7%A7_%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D_rtxkri.png',
+    methods:[
+      { title:'מוקד טלפוני בלבד', phone:'076-8095115', hours:'א\',ג\',ד\' 8:30–15:30 | ב\',ה\' 9:00–14:00, 16:00–18:00 | ו\' 9:00–12:00', steps:['התקשרו ל-076-8095115','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'agud', name:'בנק אגוד', color:'#5B2D8E',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303745/Bank_Igud_Logo_gmcx1l.png',
+    methods:[
+      { title:'מוקד טלפוני בלבד', phone:'03-6251009', hours:'א\'–ה\' | 09:00–15:00', steps:['התקשרו ל-03-6251009','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'otsar', name:'אוצר החייל', color:'#2E5E4E',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303746/%D7%91%D7%A0%D7%A7_%D7%90%D7%95%D7%A6%D7%A8_%D7%94%D7%97%D7%99%D7%99%D7%9C_yno5hm.png',
+    methods:[
+      { title:'מוקד טלפוני בלבד', phone:'1-700-700-185', hours:'א\'–ה\' | 8:00–18:00', steps:['התקשרו ל-1-700-700-185','בחרו <strong>שלוחה 2</strong>','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'klali', name:'כלל ביטוח ומימון', color:'#3E2D8F',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780303747/%D7%9C%D7%95%D7%92%D7%95_%D7%9B%D7%9C%D7%9C_%D7%91%D7%99%D7%98%D7%95%D7%97_ilzxpc.png',
+    methods:[
+      { title:'מוקד טלפוני בלבד', phone:'03-6251009', hours:'א\'–ה\' | 09:00–15:00', steps:['התקשרו ל-03-6251009','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'mas', name:'מסד', color:'#C8973A',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780304023/MassadBank_v7sxjq.svg',
+    methods:[
+      { title:'מוקד טלפוני בלבד', phone:'*3533', hours:'א\'–ה\' | 8:00–18:00', steps:['התקשרו למוקד *3533','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+  {
+    id:'pagi', name:'פאגי', color:'#3C1E78',
+    logo:'https://res.cloudinary.com/dd0wqhvek/image/upload/v1780304023/%D7%91%D7%A0%D7%A7_%D7%A4%D7%90%D7%92%D7%99_foi8ft.svg',
+    methods:[
+      { title:'מוקד טלפוני בלבד', phone:'*3360', hours:'א\'–ה\' | 8:00–18:00', steps:['התקשרו למוקד *3360','בקשו דו"ח יתרה לסילוק'] }
+    ]
+  },
+];
+
+const bg=document.getElementById('bg');
+const gp=document.getElementById('gp');
+const gh=document.getElementById('gh');
+const gb=document.getElementById('gb');
+let ab=null;
+
+BANKS.forEach(bank=>{
+  const btn=document.createElement('div');
+  btn.className='bb';
+  btn.innerHTML=`
+    <div class="logo-box">
+      <img src="${bank.logo}" alt="${bank.name}"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="logo-fb" style="background:${bank.color}">${bank.name.charAt(0)}</div>
+    </div>
+    <span class="bn">${bank.name}</span>`;
+  btn.addEventListener('click',()=>sel(bank,btn));
+  bg.appendChild(btn);
+});
+
+function sel(bank,btn){
+  if(ab===btn){btn.classList.remove('active');gp.classList.remove('show');ab=null;return;}
+  if(ab)ab.classList.remove('active');
+  btn.classList.add('active');ab=btn;
+
+  gh.style.background=`linear-gradient(135deg,${bank.color},${bank.color}99)`;
+  gh.innerHTML=`
+    <div class="gh-logo-wrap">
+      <img src="${bank.logo}" alt="${bank.name}" class="gh-logo"
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\\'font-size:24px\\'>🏦</span>')">
+    </div>
+    <span class="gh-name">${bank.name}</span>`;
+
+  let html='';
+  bank.methods.forEach((m,i)=>{
+    html+=`<div class="meth"><div class="mt"><span class="mn">${i+1}</span>${m.title}</div>`;
+    if(m.note)html+=`<div class="nbox">⚠️ ${m.note}</div>`;
+    if(m.steps){
+      html+=`<ul class="steps">`;
+      m.steps.forEach((s,si)=>html+=`<li><span class="sd">${si+1}</span><span>${s}</span></li>`);
+      html+=`</ul>`;
+    }
+    if(m.phone){
+      const cp=m.phone.replace(/[^\d\+]/g,'');
+      html+=`<div style="margin-top:8px"><a href="tel:${cp}" class="pbadge">📞 ${m.phone}</a>`;
+      if(m.hours)html+=`<div class="hbadge">🕐 ${m.hours}</div>`;
+      html+=`</div>`;
+    }
+    html+=`</div>`;
+  });
+  gb.innerHTML=html;
+  gp.classList.add('show');
+  setTimeout(()=>gp.scrollIntoView({behavior:'smooth',block:'start'}),80);
+}
+</script>
+</body>
+</html>
