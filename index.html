@@ -441,6 +441,31 @@
     .bph:hover, .bwa:hover {
         transform: scale(1.04)
     }
+
+    .back-home {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 9999;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: linear-gradient(135deg, var(--bd), var(--b));
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 30px;
+        font-family: "Heebo", sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        text-decoration: none;
+        box-shadow: 0 4px 16px rgba(30, 58, 138, .35);
+        transition: transform .2s, box-shadow .2s;
+    }
+
+    .back-home:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(30, 58, 138, .45);
+    }
     </style>
 </head>
 <body>
@@ -771,5 +796,6 @@
         }), 80);
     }
     </script>
+    <a href="https://yardenkoubi.com" class="back-home">🏠 חזרה לאתר הראשי</a>
 </body>
 </html>
